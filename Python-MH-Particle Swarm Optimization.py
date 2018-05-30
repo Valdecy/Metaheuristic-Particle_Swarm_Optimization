@@ -38,7 +38,7 @@ def initial_velocity(position, min_values = [-5,-5], max_values = [5,5]):
 def fitness_matrix_calc(position):
     fitness_matrix = position.copy(deep = True)
     for i in range(0, fitness_matrix.shape[0]):
-        fitness_matrix.iloc[i,-1] = target_function(fitness_matrix.iloc[i,0:position.shape[1]])
+        fitness_matrix.iloc[i,-1] = target_function(fitness_matrix.iloc[i,0:position.shape[1]-1])
     return fitness_matrix
 
 # Function: Individual Best
